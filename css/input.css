@@ -1,0 +1,317 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Vazirmatn Font - Local */
+@font-face {
+    font-family: 'Vazirmatn';
+    src: url('../fonts/Vazirmatn-Thin.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vazirmatn';
+    src: url('../fonts/Vazirmatn-ExtraLight.woff2') format('woff2');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vazirmatn';
+    src: url('../fonts/Vazirmatn-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vazirmatn';
+    src: url('../fonts/Vazirmatn-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vazirmatn';
+    src: url('../fonts/Vazirmatn-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vazirmatn';
+    src: url('../fonts/Vazirmatn-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vazirmatn';
+    src: url('../fonts/Vazirmatn-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vazirmatn';
+    src: url('../fonts/Vazirmatn-ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Vazirmatn';
+    src: url('../fonts/Vazirmatn-Black.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+.font-vazir {
+    font-family: 'Vazirmatn', sans-serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(34, 197, 94, 0.1);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(34, 197, 94, 0.5);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(34, 197, 94, 0.7);
+}
+
+/* Sidebar Animation */
+.sidebar {
+    transition: width 0.3s ease-in-out;
+}
+
+.sidebar-collapsed {
+    width: 80px !important;
+}
+
+.sidebar-collapsed .sidebar-text {
+    display: none;
+}
+
+.sidebar-collapsed .sidebar-icon {
+    margin: 0 auto;
+}
+
+/* Card Hover Effects */
+.stat-card {
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(34, 197, 94, 0.2);
+}
+
+/* Table Styles */
+.data-table {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.data-table th {
+    background: rgba(34, 197, 94, 0.1);
+    padding: 12px 16px;
+    text-align: right;
+    font-weight: 600;
+    color: #a78bfa;
+    border-bottom: 2px solid rgba(34, 197, 94, 0.2);
+}
+
+.data-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid rgba(34, 197, 94, 0.1);
+}
+
+.data-table tbody tr {
+    transition: background 0.2s ease;
+}
+
+.data-table tbody tr:hover {
+    background: rgba(34, 197, 94, 0.05);
+}
+
+/* Form Input Styles */
+@layer components {
+    .form-input {
+        @apply w-full bg-white/5 border border-green-400/30 rounded-xl py-3 px-4 text-white placeholder-green-300/50 focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all;
+    }
+
+    .form-label {
+        @apply block text-green-200 text-sm mb-2 font-medium;
+    }
+
+    .form-select {
+        @apply w-full bg-white/5 border border-green-400/30 rounded-xl py-3 px-4 text-white focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all appearance-none cursor-pointer;
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23a78bfa' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+        background-position: left 0.75rem center;
+        background-repeat: no-repeat;
+        background-size: 1.5em 1.5em;
+    }
+
+    .form-select option {
+        background: #1e1b4b;
+        color: white;
+    }
+
+    /* Button Styles */
+    .btn-primary {
+        @apply bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/30 flex items-center justify-center gap-2;
+    }
+
+    .btn-secondary {
+        @apply bg-white/10 hover:bg-white/20 text-white font-medium py-3 px-6 rounded-xl transition-all duration-300 border border-green-400/30 hover:border-green-400/50 flex items-center justify-center gap-2;
+    }
+
+    .btn-danger {
+        @apply bg-gradient-to-r from-red-500 to-red-700 hover:from-red-600 hover:to-red-800 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-red-500/30 flex items-center justify-center gap-2;
+    }
+
+    .btn-success {
+        @apply bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/30 flex items-center justify-center gap-2;
+    }
+
+    /* Badge Styles */
+    .badge {
+        @apply px-3 py-1 rounded-full text-xs font-medium;
+    }
+
+    .badge-success {
+        @apply bg-green-500/20 text-green-300 border border-green-400/30;
+    }
+
+    .badge-warning {
+        @apply bg-yellow-500/20 text-yellow-300 border border-yellow-400/30;
+    }
+
+    .badge-danger {
+        @apply bg-red-500/20 text-red-300 border border-red-400/30;
+    }
+
+    .badge-info {
+        @apply bg-blue-500/20 text-blue-300 border border-blue-400/30;
+    }
+
+    .badge-green {
+        @apply bg-green-500/20 text-green-300 border border-green-400/30;
+    }
+
+    /* Modal Styles */
+    .modal-overlay {
+        @apply fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 opacity-0 pointer-events-none transition-opacity duration-300;
+    }
+
+    .modal-overlay.active {
+        @apply opacity-100 pointer-events-auto;
+    }
+
+    .modal-content {
+        @apply bg-gradient-to-br from-green-900 to-green-950 rounded-2xl shadow-2xl p-6 w-full max-w-lg border border-green-400/20 transform scale-95 transition-transform duration-300;
+    }
+
+    .modal-overlay.active .modal-content {
+        @apply scale-100;
+    }
+
+    /* Toast Notifications */
+    .toast {
+        @apply fixed top-4 left-4 bg-white/10 backdrop-blur-lg rounded-xl p-4 shadow-xl border border-green-400/20 transform translate-x-full transition-transform duration-300 z-50;
+    }
+
+    .toast.show {
+        @apply translate-x-0;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+.animate-fadeIn {
+    animation: fadeIn 0.3s ease-out forwards;
+}
+
+.animate-slideIn {
+    animation: slideIn 0.3s ease-out forwards;
+}
+
+/* Staggered Animation for Lists */
+.stagger-item {
+    opacity: 0;
+    animation: fadeIn 0.3s ease-out forwards;
+}
+
+.stagger-item:nth-child(1) { animation-delay: 0.1s; }
+.stagger-item:nth-child(2) { animation-delay: 0.15s; }
+.stagger-item:nth-child(3) { animation-delay: 0.2s; }
+.stagger-item:nth-child(4) { animation-delay: 0.25s; }
+.stagger-item:nth-child(5) { animation-delay: 0.3s; }
+.stagger-item:nth-child(6) { animation-delay: 0.35s; }
+
+/* RTL Support */
+[dir="rtl"] .form-select {
+    background-position: left 0.75rem center;
+    padding-right: 1rem;
+    padding-left: 2.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .sidebar {
+        position: fixed;
+        z-index: 40;
+        transform: translateX(100%);
+    }
+    
+    .sidebar.open {
+        transform: translateX(0);
+    }
+}
+
+/* Print Styles */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+    
+    body {
+        background: white !important;
+        color: black !important;
+    }
+    
+    .data-table th,
+    .data-table td {
+        border: 1px solid #ddd !important;
+        color: black !important;
+    }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "havirkesht",
+  "version": "1.0.0",
+  "description": "هاویرکشت - سامانه کشت قراردادی چغندر قند",
+  "main": "index.html",
+  "scripts": {
+    "build:css": "npx tailwindcss -i ./css/input.css -o ./css/output.css",
+    "watch:css": "npx tailwindcss -i ./css/input.css -o ./css/output.css --watch",
+    "dev": "npx tailwindcss -i ./css/input.css -o ./css/output.css --watch"
+  },
+  "keywords": ["havirkesht", "sugar-beet", "agriculture", "farming", "contract-farming"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.0"
+  }
+}
