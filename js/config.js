@@ -1,6 +1,6 @@
 // Configuration - Based on edu.havirkesht.ir
 const CONFIG = {
-    API_BASE_URL: 'http://edu-api.havirkesht.ir',
+    API_BASE_URL: 'https://edu-api.havirkesht.ir',
     STORAGE_KEYS: {
         ACCESS_TOKEN: 'access_token',
         REFRESH_TOKEN: 'refresh_token',

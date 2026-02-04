@@ -139,7 +139,7 @@ npm run dev          # حالت توسعه (مشابه watch)
 
 آدرس پایه API:
 ```
-http://edu-api.havirkesht.ir
+https://edu-api.havirkesht.ir
 ```
 
 ### احراز هویت
@@ -337,7 +337,7 @@ server {
 
 ```javascript
 const CONFIG = {
-    API_BASE_URL: 'http://your-api-server.com',
+    API_BASE_URL: 'https://your-api-server.com',
     // ...
 };
 ```

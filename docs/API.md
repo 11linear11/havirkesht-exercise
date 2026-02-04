@@ -3,7 +3,7 @@
 ## آدرس پایه
 
 ```
-http://edu-api.havirkesht.ir
+https://edu-api.havirkesht.ir
 ```
 
 ---
@@ -376,7 +376,7 @@ async function login(username, password) {
     formData.append('username', username);
     formData.append('password', password);
     
-    const response = await fetch('http://edu-api.havirkesht.ir/token', {
+    const response = await fetch('https://edu-api.havirkesht.ir/token', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: formData
@@ -389,7 +389,7 @@ async function login(username, password) {
 async function getWithAuth(endpoint) {
     const token = localStorage.getItem('access_token');
     
-    const response = await fetch(`http://edu-api.havirkesht.ir${endpoint}`, {
+    const response = await fetch(`https://edu-api.havirkesht.ir${endpoint}`, {
         headers: {
             'Authorization': `Bearer ${token}`,
             'Content-Type': 'application/json'

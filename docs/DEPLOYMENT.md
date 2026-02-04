@@ -258,10 +258,10 @@ vercel --prod
 ```javascript
 const CONFIG = {
     // برای محیط توسعه
-    // API_BASE_URL: 'http://localhost:8000',
+    // API_BASE_URL: 'https://localhost:8000',
     
     // برای محیط تولید
-    API_BASE_URL: 'http://edu-api.havirkesht.ir',
+    API_BASE_URL: 'https://edu-api.havirkesht.ir',
     
     // سایر تنظیمات...
 };
